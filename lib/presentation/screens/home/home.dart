@@ -6,7 +6,11 @@ class HomePageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Home"),),
+      appBar: AppBar(title: const Text("Home"), backgroundColor: Colors.blue,),
+      drawer: const Drawer(),
+      body: const Center(
+        child: Text("Page home"),
+      ),
     );
   }
 }

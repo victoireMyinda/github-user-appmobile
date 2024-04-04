@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:formation/config/router.dart';
 import 'package:formation/presentation/screens/home/home.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePageScreen(),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      getPages: getPages(),
     );
   }
 }
