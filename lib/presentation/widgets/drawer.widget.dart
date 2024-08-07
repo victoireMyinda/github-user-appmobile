@@ -22,7 +22,7 @@ class myDrawer extends StatelessWidget {
           ),
         ),
         ListTile(
-          title: Text("Quiz"),
+          title: Text("Counter"),
           
           trailing: Icon(Icons.quiz, color: Colors.deepPurpleAccent,),
         ),
