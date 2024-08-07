@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:formation/config/router.dart';
-import 'package:formation/presentation/screens/home/home.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -16,6 +15,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       getPages: getPages(),
+      // translations: MyTranslations(),
+      locale: Locale('en', 'US'),
     );
   }
 }
