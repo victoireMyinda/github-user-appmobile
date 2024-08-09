@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:formation/presentation/screens/users/widgets/search.widget.dart';
 
 class UsersScreen extends StatefulWidget {
   const UsersScreen({super.key});
@@ -12,15 +13,18 @@ class _UsersScreenState extends State<UsersScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text("Users"),
-          backgroundColor: Colors.deepOrangeAccent,
-        ),
-        body: Center(
-          child:
-              Text("Users", style: Theme.of(context).textTheme.headlineLarge),
-        ),
-      ),
+          appBar: AppBar(
+            title: const Text(
+              "Users",
+              style: TextStyle(color: Colors.white),
+            ),
+            backgroundColor: Colors.deepOrangeAccent,
+          ),
+          body: const Column(
+            children: [
+              SearchWidget(),
+            ],
+          )),
     );
   }
 }
