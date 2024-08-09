@@ -18,22 +18,26 @@ class myDrawer extends StatelessWidget {
               child: Icon(Icons.person),
             ),
           ),
-         
-          
           ...(GlobalParams.menus as List).map((item) {
-            return  ListTile(
+            return ListTile(
               title: Text(item["title"]),
-             trailing: Icon(
+              leading: Icon(
                 item["icon"],
-                color: Colors.deepPurpleAccent,
+                color: Colors.deepOrangeAccent,
               ),
-              onTap :() {
-                 Navigator.of(context).pushNamed(item["route"] as String);
+              trailing: const Icon(
+                Icons.arrow_forward_sharp,
+                color: Colors.deepOrangeAccent,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed(item["route"] as String);
               },
             );
-          
           }),
-         const  Divider(height: 2,)
+          const Divider(
+            height: 2,
+          )
         ],
       ),
     );

@@ -5,5 +5,6 @@ class GlobalParams {
     {"title": "Home", "icon": Icons.home, "route": "/home"},
     {"title": "Meteo", "icon": Icons.camera, "route": "/meteo"},
     {"title": "Gallery", "icon": Icons.map, "route": "/gallery"},
+    {"title": "Users", "icon": Icons.person, "route": "/users"},
   ];
 }
