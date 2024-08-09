@@ -13,7 +13,7 @@ List<GetPage<dynamic>> getPages() {
 
     GetPage(
       name: '/users',
-      page: () => const UsersScreen(),
+      page: () =>  UsersScreen(),
       transition: Transition.cupertino,
     ),
   ];

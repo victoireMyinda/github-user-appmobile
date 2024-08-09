@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SearchWidget extends StatefulWidget {
   const SearchWidget({super.key});
@@ -9,6 +8,9 @@ class SearchWidget extends StatefulWidget {
 }
 
 class _SearchWidgetState extends State<SearchWidget> {
+  TextEditingController queryTextEditingController = TextEditingController();
+  String query = "";
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,12 +19,13 @@ class _SearchWidgetState extends State<SearchWidget> {
         children: [
           Expanded(
             child: TextField(
+              controller: queryTextEditingController,
               decoration: InputDecoration(
                   contentPadding: const EdgeInsets.only(left: 20),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(50),
                     borderSide:
-                        const BorderSide(color: Colors.deepOrange, width: 1),
+                        const BorderSide(color: Colors.deepOrange, width: 2),
                   ),
                   suffixIcon: const Icon(
                     Icons.visibility,
@@ -40,8 +43,13 @@ class _SearchWidgetState extends State<SearchWidget> {
                 color: Colors.deepOrangeAccent, shape: BoxShape.circle),
             child: Center(
               child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.search, color: Colors.white,),
+                onPressed: () {
+                  query = queryTextEditingController.text;
+                },
+                icon: const Icon(
+                  Icons.search,
+                  color: Colors.white,
+                ),
               ),
             ),
           )

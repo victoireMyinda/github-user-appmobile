@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:formation/presentation/screens/users/widgets/search.widget.dart';
 
 class UsersScreen extends StatefulWidget {
-  const UsersScreen({super.key});
+  String? nameUser;
+   UsersScreen({super.key, this.nameUser});
 
   @override
   State<UsersScreen> createState() => _UsersScreenState();
